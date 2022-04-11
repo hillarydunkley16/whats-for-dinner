@@ -1,0 +1,308 @@
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:04:08 -0400
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: root.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.0.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:49:in `rescue in new_client'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.2.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.2.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.2.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.2.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.2.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.2.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:11:34 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hvgd0121/.asdf/installs/ruby/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hvgd0121/.asdf/installs/ruby/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 528)
+Completed 200 OK in 16ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4021)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:18:13 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hvgd0121/.asdf/installs/ruby/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hvgd0121/.asdf/installs/ruby/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 528)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3606)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2022-04-10 21:18:17 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 542.1ms | Allocations: 89476)
+Completed 200 OK in 545ms (Views: 543.7ms | ActiveRecord: 0.0ms | Allocations: 90528)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:19:52 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 13585)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 14234)
+
+
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7226749287237291945', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to Recipes (20220411012432)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220411012432')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRecipe1s (20220411012715)
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE `recipe1s` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220411012715')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-04-11 01:28:07.029978', '2022-04-11 01:28:07.029978')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7226749287237291945')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:45:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 54.7ms | Allocations: 6715)
+  Rendered layout layouts/application.html.erb (Duration: 237.5ms | Allocations: 40460)
+Completed 200 OK in 262ms (Views: 245.5ms | ActiveRecord: 0.0ms | Allocations: 43687)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:46:50 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2777)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 5193)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 6082)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:50:06 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 5524)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 7940)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8796)
+
+
+Started POST "/" for 127.0.0.1 at 2022-04-10 21:50:19 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:50:19 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 5072)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 7227)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 7539)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-10 21:51:12 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 4965)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 7013)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 7281)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:00:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/Users/hvgd0121/recipe_generator/app/controllers/home_controller.rb:28: syntax error, unexpected '}', expecting =>
+...=> 'beef', veg => 'carrot', ''}
+...                              ^
+):
+  
+app/controllers/home_controller.rb:28: syntax error, unexpected '}', expecting =>
+app/controllers/home_controller.rb:28: syntax error, unexpected '}', expecting =>
+app/controllers/home_controller.rb:28: syntax error, unexpected '}', expecting =>
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:01:07 -0400
+Processing by HomeController#index as HTML
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:01:12 -0400
+Completed 500 Internal Server Error in 20553ms (ActiveRecord: 0.0ms | Allocations: 2679)
+
+
+  
+Errno::EIO (Input/output error @ io_fillbuf - fd:0 <STDIN>):
+  
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `index'
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+  
+Errno::EIO (Input/output error @ io_fillbuf - fd:0 <STDIN>):
+  
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:01:28 -0400
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 754)
+
+
+  
+Errno::EIO (Input/output error @ io_fillbuf - fd:0 <STDIN>):
+  
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:01:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 109183ms (ActiveRecord: 0.0ms | Allocations: 2012)
+
+
+  
+Errno::EIO (Input/output error @ io_fillbuf - fd:0 <STDIN>):
+  
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `gets'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:04:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 7864)
+  Rendered layout layouts/application.html.erb (Duration: 121.6ms | Allocations: 41721)
+Completed 200 OK in 130ms (Views: 124.1ms | ActiveRecord: 0.0ms | Allocations: 44947)
+
+
+Started POST "/" for 127.0.0.1 at 2022-04-11 15:04:31 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:04:31 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5089)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 7229)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 7542)
+
+
+Started POST "/" for 127.0.0.1 at 2022-04-11 15:04:35 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:04:35 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 4955)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 6994)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 7262)
+
+
+Started POST "/" for 127.0.0.1 at 2022-04-11 15:04:48 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:04:48 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4949)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 7003)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 7273)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('7226749287237291945', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateData (20220411192031)
+  [1m[35m (70.0ms)[0m  [1m[35mCREATE TABLE `data` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `directions` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220411192031')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Data (20220411192147)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220411192147')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('7226749287237291945')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDatum Create (0.4ms)[0m  [1m[32mINSERT INTO `data` (`title`, `directions`, `created_at`, `updated_at`) VALUES ('chicken pot pie', 'here is how to make chicken pot pie', '2022-04-11 19:29:29.893993', '2022-04-11 19:29:29.893993')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT `data`.* FROM `data` WHERE `data`.`id` = 1 LIMIT 1[0m
+  [1m[36mDatum Load (0.3ms)[0m  [1m[34mSELECT `data`.* FROM `data`[0m
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:33:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT `data`.* FROM `data`[0m
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (Duration: 41.6ms | Allocations: 12241)
+  Rendered layout layouts/application.html.erb (Duration: 132.1ms | Allocations: 46314)
+Completed 200 OK in 145ms (Views: 132.7ms | ActiveRecord: 3.2ms | Allocations: 50258)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-11 15:40:14 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDatum Load (0.4ms)[0m  [1m[34mSELECT `data`.* FROM `data`[0m
+  ↳ app/views/home/index.html.erb:35
+  Rendered home/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 7907)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 21286)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.6ms | Allocations: 22912)
+
+
