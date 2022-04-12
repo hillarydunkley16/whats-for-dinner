@@ -820,3 +820,508 @@ Processing by HomeController#input_protein as TURBO_STREAM
 Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 3030)
 
 
+Started GET "/protein" for ::1 at 2022-04-11 23:01:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/Users/hvgd0121/whats-for-dinner/app/controllers/home_controller.rb:33: syntax error, unexpected '}', expecting ']'
+...protein, locals: [feedback: {}}}
+...                              ^
+):
+  
+app/controllers/home_controller.rb:33: syntax error, unexpected '}', expecting ']'
+app/controllers/home_controller.rb:33: syntax error, unexpected '}', expecting ']'
+app/controllers/home_controller.rb:33: syntax error, unexpected '}', expecting ']'
+Started GET "/protein" for ::1 at 2022-04-11 23:01:58 -0400
+Processing by HomeController#protein as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3851)
+
+
+  
+NoMethodError (undefined method `keys' for [{:feedback=>{}}]:Array
+
+        keys = options.has_key?(:locals) ? options[:locals].keys : []
+                                                           ^^^^^):
+  
+app/controllers/home_controller.rb:33:in `block (2 levels) in protein'
+app/controllers/home_controller.rb:32:in `protein'
+Started GET "/protein" for ::1 at 2022-04-11 23:02:00 -0400
+Processing by HomeController#protein as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2200)
+
+
+  
+NoMethodError (undefined method `keys' for [{:feedback=>{}}]:Array
+
+        keys = options.has_key?(:locals) ? options[:locals].keys : []
+                                                           ^^^^^):
+  
+app/controllers/home_controller.rb:33:in `block (2 levels) in protein'
+app/controllers/home_controller.rb:32:in `protein'
+Started GET "/protein" for ::1 at 2022-04-11 23:02:30 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1497)
+  Rendered layout layouts/application.html.erb (Duration: 106.2ms | Allocations: 35486)
+Completed 200 OK in 109ms (Views: 108.4ms | ActiveRecord: 0.0ms | Allocations: 36431)
+
+
+Started POST "/protein" for ::1 at 2022-04-11 23:02:33 -0400
+Processing by HomeController#input_protein as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "input1"=>"", "input2"=>"", "input3"=>"", "input4"=>"", "input5"=>"", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1051)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3184)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3892)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:28:02 -0400
+  
+ArgumentError (Invalid route name, already in use: 'veg' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/protein" for ::1 at 2022-04-11 23:28:34 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 14852)
+Completed 200 OK in 21ms (Views: 20.3ms | Allocations: 15779)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:28:36 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5597)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5685)
+Completed 500 Internal Server Error in 16ms (Allocations: 6043)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `feedback' for #<ActionView::Base:0x00000000016760>
+
+        '.freeze;@output_buffer.append=( text_field_tag "input1", feedback.fetch(:input1, nil) );@output_buffer.safe_append='
+                                                                  ^^^^^^^^):
+     7: 
+     8:     <div>
+     9:         <%= label_tag "input 1"%>
+    10:         <%= text_field_tag "input1", feedback.fetch(:input1, nil) %>
+    11:         <br><br>
+    12:     </div>
+    13:     <div>
+  
+app/views/home/veg.html.erb:10
+app/views/home/veg.html.erb:6
+app/controllers/home_controller.rb:38:in `block (2 levels) in veg'
+app/controllers/home_controller.rb:37:in `veg'
+Started GET "/veg" for ::1 at 2022-04-11 23:30:10 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1142)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3572)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 4400)
+
+
+Started POST "/protein" for ::1 at 2022-04-11 23:30:13 -0400
+Processing by HomeController#input_protein as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "input1"=>"", "input2"=>"", "input3"=>"", "input4"=>"", "input5"=>"", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1017)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3048)
+Completed 200 OK in 6ms (Views: 5.0ms | Allocations: 3657)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:30:14 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1147)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3186)
+Completed 200 OK in 11ms (Views: 8.8ms | Allocations: 3481)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:30:19 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 1.9ms | Allocations: 563)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2602)
+Completed 200 OK in 11ms (Views: 10.5ms | Allocations: 2882)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:30:51 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1159)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3574)
+Completed 200 OK in 9ms (Views: 8.3ms | Allocations: 4403)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:30:54 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1136)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3175)
+Completed 200 OK in 12ms (Views: 11.3ms | Allocations: 3539)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:31:09 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1348)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3763)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 4594)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:31:28 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1348)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3763)
+Completed 200 OK in 8ms (Views: 7.6ms | Allocations: 4623)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:31:45 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1319)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3734)
+Completed 200 OK in 8ms (Views: 7.6ms | Allocations: 4594)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:37:39 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1343)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 14816)
+Completed 200 OK in 21ms (Views: 20.4ms | Allocations: 15776)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:37:41 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 2.0ms | Allocations: 959)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3000)
+Completed 200 OK in 7ms (Views: 6.5ms | Allocations: 3365)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:38:21 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1169)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3584)
+Completed 200 OK in 15ms (Views: 14.7ms | Allocations: 4413)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:38:22 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 83.9ms | Allocations: 5339)
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 5427)
+Completed 500 Internal Server Error in 86ms (Allocations: 5782)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `input_aromatics_path' for #<ActionView::Base:0x0000000001abf8>
+
+@output_buffer.append=  form_with url: input_aromatics_path, local: true, method: :post do@output_buffer.safe_append='
+                                       ^^^^^^^^^^^^^^^^^^^^
+Did you mean?  input_protein_path):
+    3: <% if local_assigns.has_key? :status_msg %>
+    4:     <p><%= status_msg %></p>
+    5: <% end %>
+    6: <%= form_with url: input_aromatics_path, local: true, method: :post do%>
+    7: 
+    8:     <div>
+    9:         <%= label_tag "input 1"%>
+  
+app/views/home/aromatics.html.erb:6
+app/controllers/home_controller.rb:66:in `block (2 levels) in aromatics'
+app/controllers/home_controller.rb:65:in `aromatics'
+Started GET "/aromatics" for ::1 at 2022-04-11 23:39:23 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 0.9ms | Allocations: 727)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 14014)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 14669)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:39:27 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3214)
+Completed 200 OK in 13ms (Views: 12.4ms | Allocations: 3600)
+
+
+Started GET "/index" for ::1 at 2022-04-11 23:39:28 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2380)
+Completed 200 OK in 8ms (Views: 6.6ms | Allocations: 2747)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:39:30 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.8ms | Allocations: 630)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2669)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 2950)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:39:35 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 0.7ms | Allocations: 569)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2608)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 2888)
+
+
+Started POST "/veg" for ::1 at 2022-04-11 23:39:38 -0400
+Processing by HomeController#input_veg as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "input1"=>"", "input2"=>"", "input3"=>"", "input4"=>"", "input5"=>"", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3052)
+Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 3585)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:39:40 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 0.7ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2595)
+Completed 200 OK in 7ms (Views: 5.4ms | Allocations: 2877)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:39:40 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.4ms | Allocations: 642)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2681)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 2962)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:41:28 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1342)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3757)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 4588)
+
+
+Started GET "/index" for ::1 at 2022-04-11 23:41:30 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2379)
+Completed 200 OK in 7ms (Views: 6.2ms | Allocations: 2752)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:41:32 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 0.9ms | Allocations: 636)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2675)
+Completed 200 OK in 6ms (Views: 5.8ms | Allocations: 2959)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:41:33 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3073)
+Completed 200 OK in 12ms (Views: 10.3ms | Allocations: 3406)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:41:35 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 1.4ms | Allocations: 998)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3037)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 3371)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:46:18 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 14836)
+Completed 200 OK in 16ms (Views: 15.9ms | Allocations: 15799)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:46:21 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3052)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 3414)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:46:23 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 2.9ms | Allocations: 633)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2672)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 2953)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:46:24 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 0.8ms | Allocations: 578)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 2632)
+Completed 200 OK in 39ms (Views: 37.4ms | Allocations: 2912)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:46:25 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1006)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3050)
+Completed 200 OK in 10ms (Views: 9.7ms | Allocations: 3386)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:46:27 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 1.3ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2684)
+Completed 200 OK in 7ms (Views: 6.6ms | Allocations: 2965)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:46:28 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 1.6ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2620)
+Completed 200 OK in 10ms (Views: 7.5ms | Allocations: 2900)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:46:38 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 1.2ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2620)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 2900)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:46:39 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 0.9ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2684)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 2965)
+
+
+Started GET "/index" for ::1 at 2022-04-11 23:46:56 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 247)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2892)
+Completed 200 OK in 10ms (Views: 8.9ms | Allocations: 3737)
+
+
+Started GET "/protein" for ::1 at 2022-04-11 23:46:57 -0400
+Processing by HomeController#protein as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/protein.html.erb within layouts/application
+  Rendered home/protein.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3230)
+Completed 200 OK in 10ms (Views: 8.6ms | Allocations: 3595)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:46:59 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3047)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 3380)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:47:01 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3039)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 3372)
+
+
+Started GET "/veg" for ::1 at 2022-04-11 23:47:02 -0400
+Processing by HomeController#veg as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/veg.html.erb within layouts/application
+  Rendered home/veg.html.erb within layouts/application (Duration: 1.1ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2635)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 2915)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:47:04 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 0.8ms | Allocations: 571)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2610)
+Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 2890)
+
+
+Started GET "/aromatics" for ::1 at 2022-04-11 23:47:33 -0400
+Processing by HomeController#aromatics as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aromatics.html.erb within layouts/application
+  Rendered home/aromatics.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1215)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3630)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 4459)
+
+
+Started GET "/oils" for ::1 at 2022-04-11 23:47:35 -0400
+Processing by HomeController#oils as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/oils.html.erb within layouts/application
+  Rendered home/oils.html.erb within layouts/application (Duration: 2.6ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3030)
+Completed 200 OK in 15ms (Views: 9.2ms | Allocations: 3393)
+
+

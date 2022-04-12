@@ -1,0 +1,37 @@
+<h1>Oils</h1>
+<h2>Please type the oils you have in your kitchen. Oils include vegetable oil, olive oil, sesame oil etc. </h2>
+<% if local_assigns.has_key? :status_msg %>
+    <p><%= status_msg %></p>
+<% end %>
+<%= form_with url: input_oils_path, local: true, method: :post do%>
+
+    <div>
+        <%= label_tag "input 1"%>
+        <%= text_field_tag "input1"%>
+        <br><br>
+    </div>
+    <div>
+        <%= label_tag "input 2"%>
+        <%= text_field_tag "input2"%>
+        <br><br>
+    </div>
+    <div>
+        <%= label_tag "input 3"%>
+        <%= text_field_tag "input3"%>
+        <br><br>
+    </div>
+    <div>
+        <%= label_tag "input 4"%>
+        <%= text_field_tag "input4"%>
+        <br><br>
+    </div>
+    <div>
+        <%= label_tag "input 5"%>
+        <%= text_field_tag "input5" %>
+    </div>
+    <div>
+    <br>
+    <%= submit_tag 'Submit'%>
+<% end %>
+<p><%= link_to 'Back', protein_path%></p>
+<p><%= link_to 'Home', index_path%></p>

@@ -7,40 +7,43 @@
 
     <div>
         <%= label_tag "input 1"%>
-        <%= text_field_tag "input1", nil %>
+        <%= text_field_tag "input1", feedback.fetch(:input1, nil) %>
         <br><br>
     </div>
     <div>
         <%= label_tag "input 2"%>
-        <%= text_field_tag "input2", nil %>
+        <%= text_field_tag "input2", feedback.fetch(:input2, nil) %>
         <br><br>
     </div>
     <div>
         <%= label_tag "input 3"%>
-        <%= text_field_tag "input3", nil %>
+        <%= text_field_tag "input3", feedback.fetch(:input3, nil) %>
         <br><br>
     </div>
     <div>
         <%= label_tag "input 4"%>
-        <%= text_field_tag "input4", nil %>
+        <%= text_field_tag "input4", feedback.fetch(:input4, nil) %>
         <br><br>
     </div>
     <div>
         <%= label_tag "input 5"%>
-        <%= text_field_tag "input5", nil %>
+        <%= text_field_tag "input5", feedback.fetch(:input5, nil) %>
     </div>
     <div>
+    <br>
     <span>Are you a vegetarian?</span>
     <div>
-        <%= radio_button_tag "reply", false, false%>
-        <%= label_tag "reply_yes", 'Yes'%>
+        <%= radio_button_tag "reply", false, feedback.fetch(:reply, nil) == false.to_s%>
+        <%= label_tag "reply_yes", 'Yes' %>
     </div>
     <div>
-        <%= radio_button_tag "reply", true, true %>
-        <%= label_tag "reply_no", 'No'%>
+        <%= radio_button_tag "reply", true, feedback.fetch(:reply, nil) == true.to_s %>
+        <%= label_tag "reply_no", 'No' %>
     </div>
 
-
+    <br>
     <%= submit_tag 'Submit'%>
 <% end %>
 <p><%= link_to 'Back', index_path%></p>
+<p><%= link_to 'Next', veg_path%></p>
+
