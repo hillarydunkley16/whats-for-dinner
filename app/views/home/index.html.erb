@@ -1,42 +1,8 @@
 <h1>What's for Dinner?</h1>
-<h1>Protein</h1>
+<h2>A recipe generator made by Hillary Dunkley and Alison Adams</h2>
 
-<div id = 'protein'>
-<%= form_with model: @home do |form| %>
-  <div id = 'input' >
-    <%= form.label :input1 %><br>
-    <%= form.text_field :input1 %>
-  </div>
+<p><%= link_to "Let's get started", protein_path%></p>
 
-  <div id = 'input'>
-    <%= form.label :input2 %><br>
-    <%= form.text_area :input2 %>
-  </div>
 
-  <div id = 'input'>
-    <%= form.label :input3%><br>
-    <%= form.text_area :input3%>
-  <div>
 
-  <div id = 'input'>
-    <%= form.label :input4 %><br>
-    <%= form.text_area :input4%>
-  </div>
-
-  
-  <div id = 'input'>
-    <%= form.label :input5%> <br>
-    <%= form.text_area :input5%>
-  </div>
-</div>
-    <%= form.submit %>
-  </div>
-<ul>
-<% @data.each do |data|%>
-  <li>
-    <%= data.title%>
-  </li>
-<% end%>
-</ul>
-<% end %>
 
