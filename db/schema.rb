@@ -19,8 +19,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_11_192147) do
   end
 
   create_table "recipe1s", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
+    t.string :protein, array: true, default: []
+    t.string :veg, array: true, default: []
+    t.string :starch, array: true, default: []
+    t.string :oils, array: true, default: []
+    t.string :aromatics, array: true, default: []
+    
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  #get 'recipe1', to: 'recipe1#index', as: 'recipe1'
+  #get 'recipe1/:id', to: 'recipe1#show', as: 'recipe1'
+
   #get 'protein', to: 'home#protein', as: 'protein'
   root "home#index"
 
-  post 'protein', to: 'home#input_protein', as: 'input_protein'
+  put 'protein', to: 'home#input_protein', as: 'input_protein'
 
   post 'veg', to: 'home#input_veg', as: 'input_veg'
 
