@@ -24,7 +24,7 @@ class HomeController < ApplicationController
   end
 
   def input_protein
-    required = [:input1, :input2, :input3, :input4, :input5, :reply]
+    required = [:input1, :input2, :input3, :input4, :input5]
     form_complete = true
     required.each do |f|
       if params.has_key? f and not params[f].blank?
@@ -38,15 +38,21 @@ class HomeController < ApplicationController
     else
       form_status_msg = "Please fill in all fields."
     end
-    respond_to do |format|
-      format.html {render :protein, locals: {status_msg: form_status_msg, feedback: params}}
-    end
+    #respond_to do |format|
+      #format.html {render :veg, locals: {status_msg: form_status_msg, feedback: params}}
+    #end
+    @recipe = Recipe.new(protein1: params[:input1], protein2: params[:input2], protein3: params[:input3], protein4: params[:input4], protein5: params[:input5])
+    puts "protein is #{@recipe.id}"
+    session[:passed_recipe] = @recipe 
+    redirect_to controller: 'home', action: 'veg', id: @recipe.id
+
   end
 
   def veg
-    respond_to do |format|
-      format.html {render :veg}
-    end
+    @recipe = Recipe.find(params[:id])
+    puts "veg is #{@recipe.id}"
+    #respond_to do |format|
+      #format.html {render :veg}
   end
 
   def input_veg

@@ -3,38 +3,38 @@
 <% if local_assigns.has_key? :status_msg %>
     <p><%= status_msg %></p>
 <% end %>
-<%= form_with url: input_starch_path, local: true, method: :post do%>
+<%= form_with scope: "starch", url: input_starch_path, method: :put do |form|%>
 
     <div>
-        <%= label_tag "input 1"%>
-        <%= text_field_tag "input1", feedback.fetch(:input1, nil) %>
+        <%= label_tag ("input 1")%>
+        <%= form.text_field :input1 %>
         <br><br>
     </div>
     <div>
-        <%= label_tag "input 2"%>
-        <%= text_field_tag "input2", feedback.fetch(:input2, nil) %>
+        <%= label_tag ("input 2")%>
+        <%= form.text_field :input2 %>
         <br><br>
     </div>
     <div>
-        <%= label_tag "input 3"%>
-        <%= text_field_tag "input3", feedback.fetch(:input3, nil) %>
+        <%= label_tag ("input 3")%>
+        <%= form.text_field :input3 %>
         <br><br>
     </div>
     <div>
-        <%= label_tag "input 4"%>
-        <%= text_field_tag "input4", feedback.fetch(:input4, nil) %>
+        <%= label_tag ("input 4")%>
+        <%= form.text_field :input4%>
         <br><br>
     </div>
     <div>
-        <%= label_tag "input 5"%>
-        <%= text_field_tag "input5", feedback.fetch(:input5, nil) %>
+        <%= label_tag ("input 5")%>
+        <%= form.text_field :input5 %>
     </div>
 
     <br>
-    <%= submit_tag 'Submit'%>
+    <%= form.submit 'Submit'%>
     
     
 <% end %>
 
-<p><%= link_to 'Back', index_path%></p>
-<p><%= link_to 'Next', veg_path%></p>
+<p><%= link_to 'Back', oils_path%></p>
+<p><%= link_to 'Next', results_path%></p>
