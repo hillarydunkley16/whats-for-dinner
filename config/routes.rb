@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   put 'protein', to: 'home#input_protein', as: 'input_protein'
 
-  post 'veg', to: 'home#input_veg', as: 'input_veg'
+  put 'veg', to: 'home#input_veg', as: 'input_veg'
+
+  #post 'veg', to: 'home#input_veg', as: 'input_veg'
 
   post 'aromatics', to: 'home#input_aromatics', as: 'input_aromatics'
 
