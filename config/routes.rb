@@ -11,11 +11,13 @@ Rails.application.routes.draw do
 
   #post 'veg', to: 'home#input_veg', as: 'input_veg'
 
-  post 'aromatics', to: 'home#input_aromatics', as: 'input_aromatics'
+  put 'aromatics', to: 'home#input_aromatics', as: 'input_aromatics'
 
-  post 'oils', to: 'home#input_oils', as: 'input_oils'
+  put 'oils', to: 'home#input_oils', as: 'input_oils'
 
-  post 'starch', to: 'home#input_starch', as: 'input_starch'
+  put 'starch', to: 'home#input_starch', as: 'input_starch'
+
+  #post 'starch', to: 'home#input_starch', as: 'input_starch'
 
   get 'index', to: 'home#index', as: 'index'
 
@@ -30,6 +32,8 @@ Rails.application.routes.draw do
   get 'starch', to: 'home#starch', as: 'starch'
 
   get 'results', to: 'home#results', as: 'results'
+
+  put 'results', to: 'home#display_results', as: 'display_results'
 
   #get 'input/:action' to 'input#show'
   get "/home", to: "home#index"

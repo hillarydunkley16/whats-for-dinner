@@ -3,7 +3,6 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html()
     end
-    #@data = Datum.all
   end
   def create
     @protein = protein.new(params[:protein])
@@ -15,6 +14,7 @@ class HomeController < ApplicationController
   end
   def show
     @protein = protein.find(params[:id])
+    @recipe = recipe.find(session[:recipe_id])
   end
 
   def protein
@@ -38,9 +38,6 @@ class HomeController < ApplicationController
     else
       form_status_msg = "Please fill in all fields."
     end
-    #respond_to do |format|
-      #format.html {render :veg, locals: {status_msg: form_status_msg, feedback: params}}
-    #end
     @recipe = Recipe.new(protein1: params[:protein][:input1], protein2: params[:protein][:input2], protein3: params[:protein][:input3], protein4: params[:protein][:input4], protein5: params[:protein][:input5])
     if @recipe.save
       puts "protein is #{params[:protein][:input1]}"
@@ -49,8 +46,6 @@ class HomeController < ApplicationController
       redirect_to new_user_path, alert: 'Error!'
     end
     session[:recipe_id] = @recipe.id
-    #redirect_to controller: 'home', action: 'veg', id: @recipe.id
-
   end
 
   def veg
@@ -79,15 +74,20 @@ class HomeController < ApplicationController
       #format.html {render :veg, locals: {status_msg: form_status_msg, feedback: params}}
     #end
     #@recipe=Recipe1.order('id ASC')
-    @recipe = Recipe.new(veg1: params[:veg][:input1], veg2: params[:veg][:input2], veg3: params[:veg][:input3], veg4: params[:veg][:input4], veg5: params[:veg][:input5])
+    @recipe = Recipe.find(session[:recipe_id])
+    @recipe.update_attribute(:veg1, params[:veg][:input1]) 
+    @recipe.update_attribute(:veg2, params[:veg][:input2])
+    @recipe.update_attribute(:veg3, params[:veg][:input3])
+    @recipe.update_attribute(:veg4, params[:veg][:input4])
+    @recipe.update_attribute(:veg5, params[:veg][:input5])
     if @recipe.save
       puts "vegetable is #{params[:veg][:input1]}"
-      redirect_to controller: 'home', action: 'aromatics', id: @recipe.id
+      redirect_to controller: 'home', action: 'aromatics' 
     else
       redirect_to new_user_path, alert: 'Error!'
     end
-    session[:recipe_id] = @recipe.id
   end
+  
 
   def aromatics
     respond_to do |format|
@@ -110,17 +110,18 @@ class HomeController < ApplicationController
     else
       form_status_msg = "Please fill in all fields."
     end
-    @recipe = Recipe.new(aromatics1: params[:aromatics][:input1], aromatics2: params[:aromatics][:input2], aromatics3: params[:aromatics][:input3], aromatics4: params[:aromatics][:input4], aromatics5: params[:aromatics][:input5])
+    @recipe = Recipe.find(session[:recipe_id])
+    @recipe.update_attribute(:aromatics1, params[:aromatics][:input1]) 
+    @recipe.update_attribute(:aromatics2, params[:aromatics][:input2])
+    @recipe.update_attribute(:aromatics3, params[:aromatics][:input3])
+    @recipe.update_attribute(:aromatics4, params[:aromatics][:input4])
+    @recipe.update_attribute(:aromatics5, params[:aromatics][:input5])
     if @recipe.save
-      puts "vegetable is #{params[:aromatics][:input1]}"
-      redirect_to controller: 'home', action: 'oils', id: @recipe.id
+      puts "aromatics is #{params[:aromatics][:input1]}"
+      redirect_to controller: 'home', action: 'oils' 
     else
       redirect_to new_user_path, alert: 'Error!'
     end
-    session[:recipe_id] = @recipe.id
-    #respond_to do |format|
-      #format.html {render :aromatics, locals: {status_msg: form_status_msg, feedback: params}}
-    #end
   end
 
   def oils
@@ -128,7 +129,7 @@ class HomeController < ApplicationController
       format.html {render :oils}
     end
   end
-  
+
   def input_oils
     required = [:input1, :input2, :input3, :input4, :input5]
     form_complete = true
@@ -144,9 +145,18 @@ class HomeController < ApplicationController
     else
       form_status_msg = "Please fill in all fields."
     end
-    #respond_to do |format|
-      #format.html {render :oils, locals: {status_msg: form_status_msg, feedback: params}}
-    #end
+    @recipe = Recipe.find(session[:recipe_id])
+    @recipe.update_attribute(:oils1, params[:oils][:input1]) 
+    @recipe.update_attribute(:oils2, params[:oils][:input2])
+    @recipe.update_attribute(:oils3, params[:oils][:input3])
+    @recipe.update_attribute(:oils4, params[:oils][:input4])
+    @recipe.update_attribute(:oils5, params[:oils][:input5])
+    if @recipe.save
+      puts "oils is #{params[:oils][:input1]}"
+      redirect_to controller: 'home', action: 'starch' 
+    else
+      redirect_to new_user_path, alert: 'Error!'
+    end
   end
   def starch
     respond_to do |format|
@@ -169,9 +179,31 @@ class HomeController < ApplicationController
     else
       form_status_msg = "Please fill in all fields."
     end
-    respond_to do |format|
-      format.html {render :starch, locals: {status_msg: form_status_msg, feedback: params}}
+    @recipe = Recipe.find(session[:recipe_id])
+    @recipe.update_attribute(:starch1, params[:starch][:input1]) 
+    @recipe.update_attribute(:starch2, params[:starch][:input2])
+    @recipe.update_attribute(:starch3, params[:starch][:input3])
+    @recipe.update_attribute(:starch4, params[:starch][:input4])
+    @recipe.update_attribute(:starch5, params[:starch][:input5])
+    if @recipe.save
+      puts "starch is #{params[:starch][:input1]}"
+      redirect_to controller: 'home', action: 'results' 
+    else
+      redirect_to new_user_path, alert: 'Error!'
     end
+  end
+  def results
+    respond_to do |format|
+      format.html {render :results}
+    @recipe = Recipe.find(session[:recipe_id])
+    puts @recipe
+    #recipe1 = Recipe.find([:protein])
+
+    end
+  end
+  def display_results
+    @recipe = Recipe.find(session[:recipe_id])
+    puts @recipe
   end
 
 end

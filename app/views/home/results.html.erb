@@ -1,1 +1,28 @@
-<h1>Here are some recipes to try:<h1>
+<h1>Here are some recipes to try:</h1>
+<% titleverbs1 = ['Roasted', 'Grilled', 'Baked', 'Fried', 'Boiled'] %>
+<% titleverbs1.shuffle%>
+<% direction_instruments = ['skillet', 'pan', 'sheet pan','saucepan', 'pot', 'baking dish', 'wok', 'dutch oven']%>
+<% direction_instruments.shuffle%>
+<% direction_utensils = ['knife', 'metal spatula', 'silicone spatula', 'slotted spoon', 'whisk', 'tongs']%>
+<% direction_utensils.shuffle%>
+<% direction_verbs_cook = ['melt', 'spread', 'layer', 'fry','saute','boil', 'steam', 'barbeque', 'roast','bake', 'simmer', 'season']%>
+<% direction_verbs_prep = ['break', 'peel', 'mix', 'whip', 'cut','chop','slice', 'grate', 'pour', 'add', 'stir', 'season']%>
+<% direction_verbs_cook.shuffle%>
+<% direction_verbs_prep.shuffle%>
+<% direction_adjectives = ['spicy', 'tart', 'tangy', 'sweet', 'savory']%>
+
+<h2><%= titleverbs1[0]%> <%= @recipe[:protein1]%> with <%=@recipe[:starch1]%> and <%= @recipe[:veg1]%></h2>
+<p> First, <%= direction_verbs_prep[0]%> the <%= @recipe[:oils1]%> oil in a <%= direction_instruments[0]%>. Then, <%= direction_verbs_cook[1]%> the <%=@recipe[:veg1]%> and the <%=@recipe[:veg2]%> in the <%=direction_instruments[1]%> until the <%= @recipe[:veg1]%> and <%=@recipe[:veg2]%> are well done. Then, <%=direction_verbs_cook[2]%> the <%=@recipe[:protein1]%> to the <%= direction_instruments[2]%> and <%= direction_verbs_cook[3]%>. Wait until the <%= @recipe[:protein1]%> is golden brown. <%= direction_verbs_prep[4]%> the <%= @recipe[:aromatics1]%> and <%= @recipe[:aromatics2]%> and <%= direction_verbs_cook[5]%> for a few more minutes. Serve and enjoy!</p>
+
+<h2> <%= titleverbs1[1]%> <%= @recipe[:protein2]%> with <%= @recipe[:starch2]%> and <%= @recipe[:veg2]%></h2>
+<p> First, <%= direction_verbs_prep[2]%> the <%= @recipe[:oils2]%> oil in a <%= direction_instruments[2]%>. Then, <%= direction_verbs_cook[3]%> the <%=@recipe[:veg2]%> and the <%=@recipe[:veg3]%> in the <%=direction_instruments[2]%> until the <%= @recipe[:veg2]%> and <%=@recipe[:veg3]%> are well done. Then, <%=direction_verbs_cook[3]%> the <%=@recipe[:protein2]%> to the <%= direction_instruments[3]%> and <%= direction_verbs_cook[4]%>. Wait until the <%= @recipe[:protein2]%> is golden brown. <%= direction_verbs_prep[5]%> the <%= @recipe[:aromatics2]%> and <%= @recipe[:aromatics3]%> and <%= direction_verbs_cook[6]%> for a few more minutes. Serve and enjoy!</p>
+
+<h2> <%= titleverbs1[2]%> <%= @recipe[:protein3]%> with <%= @recipe[:starch3]%> and <%= @recipe[:veg3]%></h2>
+<p> First, <%= direction_verbs_prep[3]%> the <%= @recipe[:oils3]%> oil in a <%= direction_instruments[3]%>. Then, <%= direction_verbs_cook[4]%> the <%=@recipe[:veg3]%> and the <%=@recipe[:veg4]%> in the <%=direction_instruments[3]%> until the <%= @recipe[:veg3]%> and <%=@recipe[:veg4]%> are well done. Then, <%=direction_verbs_cook[5]%> the <%=@recipe[:protein3]%> to the <%= direction_instruments[4]%> and <%= direction_verbs_cook[5]%>. Wait until the <%= @recipe[:protein3]%> is golden brown. <%= direction_verbs_prep[5]%> the <%= @recipe[:aromatics3]%> and <%= @recipe[:aromatics4]%> and <%= direction_verbs_cook[6]%> for a few more minutes. Serve and enjoy!</p>
+
+<h2> <%= titleverbs1[3]%> <%= @recipe[:protein4]%> with <%= @recipe[:starch4]%> and <%= @recipe[:veg4]%></h2>
+<p> First, <%= direction_verbs_prep[4]%> the <%= @recipe[:oils4]%> oil in a <%= direction_instruments[4]%>. Then, <%= direction_verbs_cook[5]%> the <%=@recipe[:veg4]%> and the <%=@recipe[:veg5]%> in the <%=direction_instruments[4]%> until the <%= @recipe[:veg4]%> and <%=@recipe[:veg5]%> are well done. Then, <%=direction_verbs_cook[6]%> the <%=@recipe[:protein4]%> to the <%= direction_instruments[5]%> and <%= direction_verbs_cook[6]%>. Wait until the <%= @recipe[:protein4]%> is golden brown. <%= direction_verbs_prep[6]%> the <%= @recipe[:aromatics4]%> and <%= @recipe[:aromatics5]%> and <%= direction_verbs_cook[6]%> for a few more minutes. Serve and enjoy!</p>
+
+<h2> <%= titleverbs1[4]%> <%= @recipe[:protein5]%> with <%= @recipe[:starch5]%> and <%= @recipe[:veg5]%></h2>
+<p> First, <%= direction_verbs_prep[5]%> the <%= @recipe[:oils5]%> oil in a <%= direction_instruments[5]%>. Then, <%= direction_verbs_cook[6]%> the <%=@recipe[:veg5]%> and the <%=@recipe[:veg1]%> in the <%=direction_instruments[5]%> until the <%= @recipe[:veg5]%> and <%=@recipe[:veg1]%> are well done. Then, <%=direction_verbs_cook[7]%> the <%=@recipe[:protein5]%> to the <%= direction_instruments[6]%> and <%= direction_verbs_cook[7]%>. Wait until the <%= @recipe[:protein5]%> is golden brown. <%= direction_verbs_prep[7]%> the <%= @recipe[:aromatics5]%> and <%= @recipe[:aromatics1]%> and <%= direction_verbs_cook[7]%> for a few more minutes. Serve and enjoy!</p>
+
