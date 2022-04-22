@@ -1,4 +1,8 @@
+<html>
+<head>
 <h1>Here are some recipes to try:</h1>
+</head>
+<body>
 <% titleverbs1 = ['Roasted', 'Grilled', 'Baked', 'Fried', 'Boiled'] %>
 <% titleverbs1.shuffle%>
 <% direction_instruments = ['skillet', 'pan', 'sheet pan','saucepan', 'pot', 'baking dish', 'wok', 'dutch oven']%>
@@ -25,4 +29,6 @@
 
 <h2> <%= titleverbs1[4]%> <%= @recipe[:protein5]%> with <%= @recipe[:starch5]%> and <%= @recipe[:veg5]%></h2>
 <p> First, <%= direction_verbs_prep[5]%> the <%= @recipe[:oils5]%> oil in a <%= direction_instruments[5]%>. Then, <%= direction_verbs_cook[6]%> the <%=@recipe[:veg5]%> and the <%=@recipe[:veg1]%> in the <%=direction_instruments[5]%> until the <%= @recipe[:veg5]%> and <%=@recipe[:veg1]%> are well done. Then, <%=direction_verbs_cook[7]%> the <%=@recipe[:protein5]%> to the <%= direction_instruments[6]%> and <%= direction_verbs_cook[7]%>. Wait until the <%= @recipe[:protein5]%> is golden brown. <%= direction_verbs_prep[7]%> the <%= @recipe[:aromatics5]%> and <%= @recipe[:aromatics1]%> and <%= direction_verbs_cook[7]%> for a few more minutes. Serve and enjoy!</p>
+</body>
+</html>
 

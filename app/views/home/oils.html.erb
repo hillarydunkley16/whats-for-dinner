@@ -1,5 +1,10 @@
+<html>
+<head>
 <h1>Oils</h1>
 <h2>Please type the oils you have in your kitchen. Oils include vegetable oil, olive oil, sesame oil etc. </h2>
+</head>
+<body>
+<main>
 <% if local_assigns.has_key? :status_msg %>
     <p><%= status_msg %></p>
 <% end %>
@@ -37,3 +42,6 @@
 
 <p><%= link_to 'Back', protein_path%></p>
 <p><%= link_to 'Home', index_path%></p>
+</body>
+</main>
+</html>

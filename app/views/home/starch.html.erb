@@ -1,5 +1,11 @@
+<html>
+<head>
+<style><%= stylesheet_link_tag 'forms.css'%></style>
 <h1>Starch</h1>
 <h2>Please type what starches you have in your kitchen. A starch includes pasta, rice and potatoes. </h2>
+</head>
+<body>
+<main>
 <% if local_assigns.has_key? :status_msg %>
     <p><%= status_msg %></p>
 <% end %>
@@ -38,3 +44,6 @@
 
 <p><%= link_to 'Back', oils_path%></p>
 <p><%= link_to 'Next', results_path%></p>
+</main>
+</body>
+</html>

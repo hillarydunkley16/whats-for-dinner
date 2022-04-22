@@ -1,4 +1,10 @@
+<html>
+<head>
+<style><%= stylesheet_link_tag 'forms.css'%></style>
 <h1>Protein</h1>
+</head>
+<main>
+<body>
 <h2>Please type what proteins you have in your kitchen. An example of a protein is chicken, beef, tofu and beans. </h2>
 <% if local_assigns.has_key? :status_msg %>
     <p><%= status_msg %></p>
@@ -45,5 +51,8 @@
 <%#recipe.save%>
 
 <p><%= link_to 'Back', index_path%></p>
+</main>
+</body>
+</html>
 
 
